@@ -4,7 +4,9 @@
 - reducer product gör fetch och setProduct till store
 
 Just nu kan den läsa Code, men ej fetcha..
-Hur hänger alla "product / products" ihop, och hur kopplar vi ihop alla functioner?! */
+Hur hänger alla "product / products" ihop, och hur kopplar vi ihop alla functioner?!
+Hur sparar vi till store och hur funcar setProduct? 
+Fyll på om vi kommer på med fler trådar:)*/
 
 
 import React from "react";
