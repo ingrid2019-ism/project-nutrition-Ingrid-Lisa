@@ -1,29 +1,35 @@
+/* Buggen i Quagga är fixad.
+- GetProduct läser in code från kamera eller manuellt och dispatchar fetchProduct funktionen
+- Show Info printar ut info ifrån fetch
+- reducer product gör fetch och setProduct till store
+
+Just nu kan den läsa Code, men ej fetcha..
+Hur hänger alla "product / products" ihop, och hur kopplar vi ihop alla functioner?! */
+
+
 import React from "react";
 import { BarcodeScanner } from "components/BarcodeScanner";
+import {fetchProduct, products} from "reducers/product"
+import {useDispatch} from "react-redux"
+import { Provider } from 'react-redux'
+import { configureStore, combineReducers } from '@reduxjs/toolkit'
+import {GetProduct} from "components/GetProduct"
 
-const onDetected = (code) => {
-  console.log(`Code: ${code}`);
-  fetch(`https://world.openfoodfacts.org/api/v0/product/${code}.json`)
-    .then((data) => data.json())
-    .then((json) => {
-      console.log(json);
-    });
-};
+const reducer = combineReducers({
+  /* ui: ui.reducer, */
+  products: products.reducer
+})
+
+
+const store = configureStore({ reducer })
+
+
 
 export const App = () => {
+  
   return (
-    <div>
-      <label>
-        {" "}
-        Test codes here:{" "}
-        <input type="text" onChange={(e) => onDetected(e.target.value)}></input>
-      </label>
-      <p>
-        {" "}
-        Use the field above to test barcodes manually and keep an eye on your
-        console in the browser. i.e. Type 7311070347272 - Pågen Gifflar. Yum
-      </p>
-      <BarcodeScanner onDetected={onDetected}></BarcodeScanner>
-    </div>
+    <Provider store= {store}>
+      <GetProduct/>
+    </Provider>
   );
 };
