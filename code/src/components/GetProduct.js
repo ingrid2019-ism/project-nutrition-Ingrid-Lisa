@@ -1,5 +1,5 @@
 import React from "react"
-import {fetchProduct, product} from "reducers/product"
+import {fetchProduct} from "reducers/product"
 import {useDispatch} from "react-redux"
 import { BarcodeScanner } from "components/BarcodeScanner"
 

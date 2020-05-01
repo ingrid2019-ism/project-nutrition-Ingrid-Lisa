@@ -9,9 +9,8 @@ testa använda [0] för att plocka ut ett första object */
 
 
 import React from "react";
-import { BarcodeScanner } from "components/BarcodeScanner";
-import {fetchProduct, products} from "reducers/product"
-import {useDispatch} from "react-redux"
+
+import { products} from "reducers/product"
 import { Provider } from 'react-redux'
 import { configureStore, combineReducers } from '@reduxjs/toolkit'
 import {GetProduct} from "components/GetProduct"
