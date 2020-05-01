@@ -15,15 +15,15 @@ export const ShowInfo = () => {
        </h1>
        <Content>
        <Image src = {productInfo.status === 1 && productInfo.product.image_front_small_url}/>
-       <p>
+       <Text>
        The whole thing weighs:{productInfo.status === 1 && productInfo.product.product_quantity}
        <br></br>
        100g contains: {productInfo.status === 1 && productInfo.product.nutriments.sugars}g sugar and
        {productInfo.status === 1 && productInfo.product.nutriments.fat}g fat
-       </p>
+       </Text>
        </Content>
        <h2>
-         
+         Make the right choice!
        </h2>
       </Main>
       )}
@@ -38,12 +38,12 @@ padding: 0.7rem;
 display:flex;
 flex-direction: column;
 align-items:center;
-`
+`;
 
 const Image = styled.img`
   width:300px;
   height: auto;
-`
+`;
 const Content = styled.div`
 display:flex;
 flex-direction:column;
@@ -52,3 +52,6 @@ flex-direction:column;
   }
 `;
 
+const Text = styled.p`
+font-size: 1rem;
+`;
