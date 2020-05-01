@@ -1,6 +1,6 @@
 import React from 'react'
 import { useSelector } from 'react-redux'
-import {products} from "reducers/product"
+import { products } from "reducers/product"
 
 
 export const ShowInfo = () => {
@@ -9,8 +9,9 @@ export const ShowInfo = () => {
   /* if( !products === true) */ 
   return(
     <>
+   
       <div>
-       <h1> PRODUCT INFO:{/*  {productInfo.product.product_name} */} {productInfo.code} {productInfo.status}
+       <h1> PRODUCT INFO: {productInfo.status === 1 && productInfo.product.product_name}{productInfo.code} {productInfo.status}
        </h1>
       </div>
       </>
