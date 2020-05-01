@@ -9,6 +9,7 @@ export const ShowInfo = () => {
   /* if( !products === true) */ 
   return(
     <>
+    {productInfo.product && productInfo.status === 1 && (
       <div>
        <h1> PRODUCT INFO: {productInfo.status === 1 && productInfo.product.product_name}
        </h1>
@@ -22,9 +23,9 @@ export const ShowInfo = () => {
        <h2>
          Choose to be healthy - Is this food good for you?
        </h2>
-       
-       
       </div>
+      )}
+       {productInfo.status === 0 && <h1>OUPS! CANT FIND</h1>}
       </>
   )
 }
