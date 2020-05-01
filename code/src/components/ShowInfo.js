@@ -8,7 +8,7 @@ export const ShowInfo = () => {
   /* if( !products === true) */ 
   return(
       <div>
-       {/*   {productInfo.product.} */}
+       <h1> {productInfo.product.product_name} </h1>
       </div>
   )
 }
