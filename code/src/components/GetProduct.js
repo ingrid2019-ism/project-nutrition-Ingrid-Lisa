@@ -14,13 +14,12 @@ export const GetProduct = (code) => {
       <>
     <label>
         {" "}
-        Test codes here:{" "}
+        Manual barcode goes here:{" "}
+        (testercode:Type 7311070347272 )
         <input type="text" onChange={(e) => onDetected(e.target.value)}></input>
     </label>
     <p>
         {" "}
-        Use the field above to test barcodes manually and keep an eye on your
-        console in the browser. i.e. Type 7311070347272 - Pågen Gifflar. Yum
     </p>
     <BarcodeScanner onDetected={code}></BarcodeScanner>
     </>
