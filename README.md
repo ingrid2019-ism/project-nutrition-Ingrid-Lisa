@@ -1,13 +1,10 @@
 # Project Nutrition
 
-Replace this readme with your own information about your project.
-
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
+This was a pairprogramming assignment was to fetch API data, use a barcode scanner and render information about the scanned food item. 
 
 ## The problem
-
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+We missed one detail in conditional rendering that cost us a lot of time. Im not roud over the initial styling but we did manage to meet all the requirements in a short time and we did learn alot abot redux and stores.
 
 ## View it live
 
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
+Make healthy choices : https://nutrition-info.netlify.app/
