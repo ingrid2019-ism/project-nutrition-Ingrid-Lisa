@@ -4,12 +4,13 @@ import {useDispatch} from "react-redux"
 import { BarcodeScanner } from "components/BarcodeScanner"
 
 export const GetProduct = (code) => {
-const dispatch = useDispatch()
+  const dispatch = useDispatch()
+  
   const onDetected = (code) => {
-  console.log(`CodeLOG: ${code}`);
+  console.log(`CodeLOG: ${code}`)
   dispatch(fetchProduct(code))
   }
-  return(
+  return (
       <>
     <label>
         {" "}

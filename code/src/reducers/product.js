@@ -19,6 +19,7 @@ export const products = createSlice({
       fetch(`https://world.openfoodfacts.org/api/v0/product/${code}.json`)
         .then((res) => res.json())
         .then((json )=> {
+          console.log(json)
           dispatch(products.actions.setProduct(json))
          /*  dispatch(ui.actions.setLoading(false)) */
         })
