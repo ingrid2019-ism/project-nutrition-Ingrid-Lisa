@@ -8,7 +8,8 @@ export const ShowInfo = () => {
   /* if( !products === true) */ 
   return(
       <div>
-       <h1> {productInfo.product.product_name} </h1>
+       <h1> PRODUCT INFO: {productInfo.code} {productInfo.status}
+       {productInfo.brands}</h1>
       </div>
   )
 }

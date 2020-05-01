@@ -1,12 +1,11 @@
-/* Buggen i Quagga är fixad.
-- GetProduct läser in code från kamera eller manuellt och dispatchar fetchProduct funktionen
+/* 
 - Show Info printar ut info ifrån fetch
 - reducer product gör fetch och setProduct till store
 
-Just nu kan den läsa Code, men ej fetcha..
-Hur hänger alla "product / products" ihop, och hur kopplar vi ihop alla functioner?!
 Hur sparar vi till store och hur funcar setProduct? 
-Fyll på om vi kommer på med fler trådar:)*/
+Fyll på om vi kommer på med fler trådar:)
+
+testa använda [0] för att plocka ut ett första object */
 
 
 import React from "react";
@@ -32,7 +31,8 @@ export const App = () => {
   
   return (
     <Provider store={store}>
+       <ShowInfo/>
       <GetProduct/>
-      <ShowInfo/>
+     
     </Provider>
   )}
