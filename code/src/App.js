@@ -1,15 +1,6 @@
-/* 
-- Show Info printar ut info ifrån fetch
-- reducer product gör fetch och setProduct till store
-
-Hur sparar vi till store och hur funcar setProduct? 
-Fyll på om vi kommer på med fler trådar:)
-
-testa använda [0] för att plocka ut ett första object */
-
+/* Need to finish styling */
 
 import React from "react";
-
 import { products} from "reducers/product"
 import { Provider } from 'react-redux'
 import { configureStore, combineReducers } from '@reduxjs/toolkit'
@@ -30,8 +21,7 @@ export const App = () => {
   
   return (
     <Provider store={store}>
-       <ShowInfo/>
+      <ShowInfo/>
       <GetProduct/>
-     
     </Provider>
   )}

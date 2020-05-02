@@ -3,12 +3,14 @@ import { useSelector } from 'react-redux'
 import { products } from "reducers/product"
 import styled from "styled-components"
 
+
 export const ShowInfo = () => {
   const productInfo = useSelector(state => state.products.product)
   console.log("prodInfo",productInfo)
-  /* if( !products === true) */ 
+  
   return(
     <>
+    
     {productInfo.product && productInfo.status === 1 && (
       <Main>
        <h1> Choose to be healthy - Is   {productInfo.status === 1 && productInfo.product.product_name} good for you?
