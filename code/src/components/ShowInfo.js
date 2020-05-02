@@ -13,15 +13,15 @@ export const ShowInfo = () => {
     
     {productInfo.product && productInfo.status === 1 && (
       <Main>
-       <Title> Choose to be healthy - Is   {productInfo.status === 1 && productInfo.product.product_name} good for you?
+       <Title> Choose to be healthy - Is   {productInfo.product.product_name} good for you?
        </Title>
        <Content>
-       <Image src = {productInfo.status === 1 && productInfo.product.image_front_small_url}/>
+       <Image src = {productInfo.product.image_front_small_url}/>
        <Text>
-       The whole thing weighs:{productInfo.status === 1 && productInfo.product.product_quantity}g
+       The whole thing weighs:{productInfo.product.product_quantity}g
        <br></br>
-       100g contains: {productInfo.status === 1 && productInfo.product.nutriments.sugars}g sugar &    
-       {  productInfo.status === 1 && productInfo.product.nutriments.fat}g fat
+       100g contains: {productInfo.product.nutriments.sugars}g sugar &    
+       {  productInfo.product.nutriments.fat}g fat
        </Text>
        </Content>
       </Main>
