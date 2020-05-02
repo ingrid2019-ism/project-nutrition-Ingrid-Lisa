@@ -1,7 +1,7 @@
 import React from 'react'
 import { useSelector } from 'react-redux'
 import { products } from "reducers/product"
-import styled from "styled-components"
+import styled from "styled-components/macro"
 
 
 export const ShowInfo = () => {
@@ -47,13 +47,16 @@ const Image = styled.img`
 `;
 const Content = styled.div`
 display:flex;
+background: ghostwhite;
+padding: 15px;
+border-radius: 4px;
 flex-direction:column;
 align-content:center;
 justify-content:center;
 align-items: center;
 @media (min-width: 768px) {
     flex-direction: row;
-    height:100%;
+    height:auto;
   }
 `;
 

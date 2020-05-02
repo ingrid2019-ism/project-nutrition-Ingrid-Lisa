@@ -3,7 +3,7 @@ import {fetchProduct} from "reducers/product"
 import {useDispatch} from "react-redux"
 import { BarcodeScanner } from "components/BarcodeScanner"
 import {ScanBarcodeBtn} from "components/ScanBarcodeBtn"
-import styled from "styled-components"
+import styled from "styled-components/macro"
 
 export const GetProduct = (code) => {
   const dispatch = useDispatch()
@@ -14,6 +14,7 @@ export const GetProduct = (code) => {
   }
   return (
     <Main>
+      <Content>
       <Title>
         Make the right choice!
       </Title>
@@ -23,26 +24,39 @@ export const GetProduct = (code) => {
     <label>
       {" "}
       Push button to scan your product with the camera or enter the barcode manually:{" "}
-      (testercode:7311070347272 )
+      (testercode:
+      7311070347272)
     <input type="text" onChange={(e) => onDetected(e.target.value) } ></input>
     </label>
     </Text>
+    </Content>
     </Main>
   )
 }
 
 const Text = styled.h2`
 font-size: 1rem;
+width: 60%;
+margin: 0 auto;
+text-align:center;
 color: ${(props) => props.color};
 `;
 
 const Title = styled.h1`
 font-family: 'Lobster', cursive;
 font-size: 2rem;
+text-align: center;
 font-weight:bold;
 color: red;
 `
-
+const Content = styled.section`
+width: auto;
+background: ghostwhite;
+padding: 20px;
+display: flex;
+flex-direction: column;
+align-items:center;
+`
 
 const Main = styled.div`
 background: powderblue;

@@ -35,7 +35,7 @@ padding: 15px;
 font-size: 1rem;
 color: red;
 border: solid 1px orange;
-margin-bottom: 50px;
+margin: 50px;
 &:hover{
     color:orange;
     border: solid 2px orange
