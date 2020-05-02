@@ -14,6 +14,10 @@ export const GetProduct = (code) => {
   }
   return (
     <Main>
+      <Title>
+        Make the right choice!
+      </Title>
+      <Text color="red" > Check your food here before eating</Text>
       <ScanBarcodeBtn/>  
     <Text>
     <label>
@@ -28,13 +32,22 @@ export const GetProduct = (code) => {
 }
 
 const Text = styled.h2`
-font-size: 1.2rem;
+font-size: 1rem;
+color: ${(props) => props.color};
+`;
+
+const Title = styled.h1`
+font-family: 'Lobster', cursive;
+font-size: 2rem;
+font-weight:bold;
+color: red;
 `
 
 
 const Main = styled.div`
 background: powderblue;
-padding: 1rem;
+padding: 2rem;
+height: 100vh;
 display:flex;
 flex-direction: column;
 align-items:center;
