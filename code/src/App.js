@@ -1,14 +1,16 @@
 /* Need to finish styling */
 
 import React from "react";
-import { products} from "reducers/product"
+import { products, loader} from "reducers/product"
 import { Provider } from 'react-redux'
 import { configureStore, combineReducers } from '@reduxjs/toolkit'
 import {GetProduct} from "components/GetProduct"
 import {ShowInfo} from "components/ShowInfo"
 
+
+
 const reducer = combineReducers({
-  /* ui: ui.reducer, */
+  loader: loader.reducer,
   products: products.reducer
 })
 
@@ -21,6 +23,7 @@ export const App = () => {
   
   return (
     <Provider store={store}>
+      <loader/>
       <ShowInfo/>
       <GetProduct/>
     </Provider>
