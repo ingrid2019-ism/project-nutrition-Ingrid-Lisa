@@ -12,16 +12,29 @@ export const products = createSlice({
       }
     }
   })
+
+
+  export const loader = createSlice({
+    name: "loader",
+    initialState:{
+      isLoading: false
+    },
+    reducers: {
+      setLoading: (state, action) => {
+        state.product = action.payload
+      }
+    }
+  })
   
   export const fetchProduct = code => {
     return dispatch => {
-      /* dispatch(ui.actions.setLoading(true)) */
+      dispatch(loader.actions.setLoading(true)) 
       fetch(`https://world.openfoodfacts.org/api/v0/product/${code}.json`)
         .then((res) => res.json())
         .then((json )=> {
           console.log(json)
           dispatch(products.actions.setProduct(json))
-         /*  dispatch(ui.actions.setLoading(false)) */
+          dispatch(loader.actions.setLoading(false)) 
         })
     }
   }
